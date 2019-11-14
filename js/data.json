@@ -1,0 +1,15 @@
+[
+  {
+    compatiblePersonality: '', // (intro/extro)version
+    needsXRooms: 0, // a minimum number
+    needsYard: false,
+    tolerates: ['', '', ''], // children, cats, dogs
+    content: {
+              species: '',
+              age: 0,
+              sex: '',
+              description: '', // physical description
+              biography: '' // sales blurb
+    }
+  }
+]
