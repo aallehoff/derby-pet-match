@@ -13,21 +13,97 @@
 
 <body>
   <header>
-    <nav>
+    <nav class="navbar navbar-dark bg-primary">
+      <a class="navbar-brand" href="#">Derby Pet Match</a>
+      <ul class="navbar-nav">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="adopt.html">Adopt</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#about">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#contact">Contact</a>
+        </li>
+      </ul><!-- /.navbar-nav -->
 
-    </nav>
+    </nav><!-- /.navbar -->
   </header>
 
-  <main>
-    <section>
-
-    </section>
-  </main>
+    <div class="jumbotron">
+      <h1 class="display-5">Adopt now!</h1>
+      <p class="lead">Are you ready to take home a new <em>forever friend</em>?</p>
+      <hr>
+      <p>We have plenty of pets who are ready for a lifetime supply of warm nights, endless food, and plenty of affection right now. All you have to do is answer a few questions.</p>
+      <a class="btn btn-primary btn-large" href="adopt.html">Let's get started!</a>
+      
+    </div><!-- /.jumbotron -->
+  
+    <div class="container">
+      <div id="about">
+        <h2>About Us</h2>
+        <div>
+          <h3>Our Story</h3>
+          <p>Founded in Louisville, KY in 199X, our mission is to use the latest in web technologies to match wayward pets with hopeful caretakers. We ask thoughtful questions in order to find the right pet for you, not the right pet for your decor!</p>
+        </div>
+        <div>
+          <h3>Our Website</h3>
+          <p>Is secretly a final project for Code Louisville: Front-End Web Development written by Aaron Allehoff. Designed with a mobile-first approach, it uses Bootstrap and jQuery to create an interactive experience.</p>
+        </div>
+      
+      </div><!-- /#about -->
+      
+      <div id="contact">
+        <h2>Contact Info</h2>
+        
+        <div>
+          <h3>Hours</h3>
+          <p>Open Tuesday through Saturday, 10am to 6pm. Closed Sundays, Mondays, and major holidays.</p>
+        </div>
+        <div>
+          <h3>Call us</h3>
+          <p> We can be reached at <a href="tel:502-555-5555">(502) 555-5555</a> or online at 
+            <a href="mailto:contact@derbypetmatch.org">"<em>contact@derbypetmatch.org</em>"</a>.
+          </p>
+        </div>
+        <div>
+          <h3>Find us</h3>
+          <p>We are located in the comfortable Highlands neighborhood of Louisville, KY at the corner of Bardstown Rd. and Fictional Ave. Come say hello; we have some pets who are ready to meet you!</p>
+          <address>
+          100 Fictional Avenue<br>
+          Louisville, KY 40204<br>
+          </address>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12534.865715163434!2d-85.73691625902858!3d38.239687028357594!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x886972d528100b1f%3A0xff5c58ca2618a50a!2sHighlands%2C%20Louisville%2C%20KY%2040204!5e0!3m2!1sen!2sus!4v1574214965033!5m2!1sen!2sus" width="400" height="300" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+        </div>
+        
+      </div><!-- /#contact -->
+      
+    </div><!-- /.container -->
 
   <footer>
-    <address>
-
-    </address>
+    <ul class="nav">
+        <li class="nav-item">
+          <a class="nav-link" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="adopt.html">Adopt</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#about">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#contact">Contact</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="tel:502-555-5555">Call now</a>
+        </li>
+        <li class="nav-item ml-auto">
+          <a class="nav-link disabled" href="#"><address class="nav-text">100 Fictional Ave., Louisville, KY 40204</address></a>
+        </li>
+      </ul>
   </footer>
 
   <script src="js/jquery-3.4.1.min.js"></script>
