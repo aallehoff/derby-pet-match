@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Adopt</title>
+  <title>Home</title>
 
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <link rel="stylesheet" href="css/style.css">
@@ -13,27 +13,61 @@
 
 <body>
   <header>
-    <nav>
+    <nav class="navbar navbar-expand-md navbar-dark bg-primary">
+      <a class="navbar-brand" href="#">Derby Pet Match</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNav"><span class="navbar-toggler-icon"></span></button>
+      
+      <div class="collapse navbar-collapse" id="collapsibleNav">
+        <ul class="navbar-nav ml-md-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="adopt.html">Adopt</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#about-text">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contact-text">Contact</a>
+          </li>
+        </ul><!-- /.navbar-nav -->
+      </div><!-- /#collapsibleNav -->
 
-    </nav>
+    </nav><!-- /.navbar -->
   </header>
-
-  <main>
-    <section>
-
-    </section>
-  </main>
+  
+    <div class="container-fluid">
+      
+    </div><!-- /.container-fluid -->
 
   <footer>
-    <address>
-
-    </address>
+    <ul class="nav d-flex flex-column flex-md-row">
+        <li class="nav-item">
+          <a class="nav-link" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="adopt.html">Adopt</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#about">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#contact">Contact</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="tel:502-555-5555">Call now</a>
+        </li>
+        <li class="nav-item ml-md-auto">
+          <a class="nav-link disabled" href="#"><address class="nav-text">100 Fictional Ave., Louisville, KY 40204</address></a>
+        </li>
+      </ul>
   </footer>
 
   <script src="js/jquery-3.4.1.min.js"></script>
   <script src="js/bootstrap.bundle.min.js"></script>
-  <script src="js/app.js"></script>
 
 </body>
 
 </html>
+
