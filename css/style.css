@@ -1,0 +1,3 @@
+.appQuestion {
+  display: none;
+} /* To be overriden in app.js */

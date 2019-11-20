@@ -20,16 +20,16 @@
       <div class="collapse navbar-collapse" id="collapsibleNav">
         <ul class="navbar-nav ml-md-auto">
           <li class="nav-item">
-            <a class="nav-link" href="#">Home</a>
+            <a class="nav-link" href="index.html">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" href="adopt.html">Adopt</a>
+            <a class="nav-link active" href="#">Adopt</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#about-text">About</a>
+            <a class="nav-link" href="index.html#about-text">About</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#contact-text">Contact</a>
+            <a class="nav-link" href="index.html#contact-text">Contact</a>
           </li>
         </ul><!-- /.navbar-nav -->
       </div><!-- /#collapsibleNav -->
@@ -38,6 +38,69 @@
   </header>
   
     <div class="container-fluid">
+      <div class="jumbotron" id="appPreamble">
+            <h1 class="display-5">Pet Adoption</h1><hr>
+          </div>
+      
+      <div id="appWrap">
+        <div id="appInput">
+          <div class="appInitial" id="q0">
+            <h2>Let's begin!</h2><hr>
+            <p>Would you like us to find a pet who best suits you and your home, or simply view all available pets?<br><br>
+              
+            <button class="button">View all pets</button>
+            <button class="button">Find your match</button>
+            </p>
+          </div>
+          
+          <div class="appQuestion" id="q1">
+            <h2>What kind of personality do you have?</h2><hr>
+            <p>We know you're a caring person because you're interested in adoption. Some pets are better suited to certain human lifestyles. Do you have an introverted, or an extroverted personality?<br><br>
+            
+            <button class="button">I'm an introvert</button>
+            <button class="button">I'm an extrovert</button>
+            </p>
+          </div>
+          
+          <div class="appQuestion" id="q2">
+            <h2>How big is your living space?</h2>
+            <p>The amount of space a pet needs to live comfortable can vary dramatically based on multiple factors, such as species, breed, sex, etc. It's okay if you don't own your own home, we just need to know how many rooms you have.<br><br>
+            I have <input type="number"> rooms.<br>
+            <button class="button">Proceed</button>
+            </p>
+          </div>
+          
+          <div class="appQuestion" id="q3">
+            <h2>Do you have access to a yard?</h2>
+            <p>Some pets require daily access to the outdoors, such as a yard. Can you provide or have access to such a space?<br><br>
+            
+              <button class="button">I have a yard</button>
+              <button class="button">I do not have a yard</button>
+            </p>
+          
+          </div>
+          
+          <div class="appQuestion" id="q4">
+          <h2>Which of the following do you already have?</h2>
+          <p>Everyone has likes and dislikes, even pets! Some pets don't have the temperment to deal with children, or even others of their own species. Please read the following choices and select those things which exist in your home.<br><br>
+          
+          <input type="checkbox" id="children">
+          <label for="children">Children</label>
+          <input type="checkbox" id="cats">
+          <label for="cats">Cats</label>
+          <input type="checkbox" id="dogs">
+          <label for="dogs">Dogs</label>
+          
+          <button class="button">Show me my matches!</button>
+          </p>
+          
+          </div>
+
+        </div>
+        <div id="row appOutput">
+
+        </div><!-- /.row /.appOutput -->
+      </div>
       
     </div><!-- /.container-fluid -->
 
