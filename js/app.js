@@ -1,3 +1,5 @@
+/* eslint-env es6, browser, jquery */
+
 let question = 0;
 let response = {
   "personality": "",
@@ -17,7 +19,13 @@ function viewAll() {
 }
 
 function petMatch() {
-  console.log("petMatch: Not yet implemented");
+  question += 1;
+  $('.appInitial').hide();
+  $('#q1').show();
+  
+  $('.appQuestion').on('click', 'button', (event) => {
+    
+  })
 }
 
 
