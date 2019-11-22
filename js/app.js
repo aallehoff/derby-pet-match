@@ -13,27 +13,17 @@ $('.appInitial').on('click', 'button', (event) => {
 })
 
 function viewAll() {
-  console.log(true)
+  console.log("viewAll: Not yet implemented");
 }
 
 function petMatch() {
-  console.log(false);
+  console.log("petMatch: Not yet implemented");
 }
 
 
 
 
-let pets;
 
-$(document).ready(function() {
-console.log(pets)
-  $.getJSON('js/data.json', (result) => {
-    console.log(result);
-    console.log('in ' + result);
-    pets = result;
-  }).done((result) => {
-    console.log('done ' + result)
-  })
-
-  console.log('after ' + pets);
-});
+//  $.getJSON('js/data.json', (result) => {
+//    
+//  })
