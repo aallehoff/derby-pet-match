@@ -8,8 +8,10 @@
               "species": "",
               "age": 0,
               "sex": "",
+              "name": "",
               "description": "",
-              "biography": ""
+              "biography": "",
+              "imageSrc": ""
     }
   },
   {
@@ -21,8 +23,10 @@
               "species": "cat",
               "age": 3,
               "sex": "female",
-              "description": "example female cat",
-              "biography": "This is an example female cat."
+              "name": "ExampleCatFemale",
+              "description": "calico",
+              "biography": "This is an example female cat.",
+              "imageSrc": ""
     }
   },
   {
@@ -34,8 +38,10 @@
               "species": "dog",
               "age": 7,
               "sex": "male",
-              "description": "example male dog",
-              "biography": "This is an example male dog."
+              "name": "ExampleDogMale",
+              "description": "brindle",
+              "biography": "This is an example male dog.",
+              "imageSrc": ""
     }
   }
 ]

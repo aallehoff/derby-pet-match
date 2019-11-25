@@ -10,14 +10,36 @@ $('.appInitial').on('click', 'button', (event) => {
 })
 
 function viewAll() {
+  $('.appInitial').hide();
   question = -1;
-  console.log("viewAll: Not yet implemented");
+  response[question] = "viewAll";
+
+  $.getJSON('js/data.json', (result) => {
+    $.each(result, (i, petObj) => {
+      console.log(i, petObj);
+      let output = `<div class="card">
+                      <div class="card-body">
+                        <img src="${petObj['content']['imgSrc']}" class="card-img-top" alt="${petObj['content']['name']} the ${petObj['content']['description']} ${petObj['content']['species']}">
+                        <h5 class="card-title">${petObj['content']['name']}</h5>
+                        ${petObj['content']['biography']}
+                      </div>
+                      <ul class="list-group list-group-flush">
+                        <li class="list-group-item">Species: ${petObj['content']['species']}</li>
+                        <li class="list-group-item">Age: ${petObj['content']['age']}</li>
+                        <li class="list-group-item">Sex: ${petObj['content']['sex']}</li>
+                      </ul>
+                    </div>`;
+      $('.appOutput').append(output);
+
+    });
+  })
+
 }
 
 function petMatch() {
   $('.appInitial').hide();
   response[question] = "petMatch";
-  question += 1;
+  question = 1;
   $('#q1').show();
 
   function nextQuestion() {
@@ -50,15 +72,7 @@ function petMatch() {
 
     }
 
-          nextQuestion();
+    nextQuestion();
 
   })
 }
-
-
-
-
-
-//  $.getJSON('js/data.json', (result) => {
-//    
-//  })
