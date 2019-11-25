@@ -15,19 +15,32 @@ function viewAll() {
 }
 
 function petMatch() {
-  question += 1;
   $('.appInitial').hide();
+  response[question] = "petMatch";
+  question += 1;
   $('#q1').show();
-
-  $('.appQuestion').on('click', 'button', (event) => {
-    if (event.target.attributes['data-input'] !== undefined) {
-      console.log("Input: Not yet implemented")
-    } else {
-      response[question] = event.target.attributes['data-selection'].nodeValue;
-      console.log(response);
+  
+function nextQuestion() {
+  console.log(response);
       $('#q' + question).hide();
       question++;
       $('#q' + question).show();
+}
+
+  $('.appQuestion').on('click', 'button', (event) => {
+    if (event.target.attributes['data-input'] !== undefined) {
+      //      console.log("Input: Not yet implemented")
+      for (let i = 0; i < $(event.target).siblings('input').length; i++) {
+        if ($(event.target).siblings('input')[i].attributes['type'].nodeValue == "number") {
+          response[question] = $($(event.target).siblings('input')[i]).val();
+          nextQuestion();
+        } else if ($(event.target).siblings('input')[i].attributes['type'].nodeValue == "checkbox") {
+          console.log('Checkbox: not yet implemented');
+        }
+      }
+    } else {
+      response[question] = event.target.attributes['data-selection'].nodeValue;
+      nextQuestion()
 
     }
 
