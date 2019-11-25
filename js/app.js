@@ -74,16 +74,18 @@ function printResults(selector, array, keys) {
       }
 
       // Template output.
-      let output = `<div class="card">
+      let output = `<div class="card col-12 col-md-6 col-xl-3">
                       <div class="card-body">
-                        <img src="${petObj['content']['imgSrc']}" class="card-img-top" alt="${petObj['content']['name']} the ${petObj['content']['description']} ${petObj['content']['species']}">
+                        <img src="${petObj['content']['imageSrc']}" class="card-img-top" alt="${petObj['content']['name']} the ${petObj['content']['species']}">
                         <h5 class="card-title">${petObj['content']['name']}</h5>
-                        ${petObj['content']['biography']}
+                        ${petObj['content']['bio']}
                       </div>
                       <ul class="list-group list-group-flush">
                         <li class="list-group-item">Species: ${petObj['content']['species']}</li>
                         <li class="list-group-item">Age: ${petObj['content']['age']}</li>
                         <li class="list-group-item">Sex: ${petObj['content']['sex']}</li>
+                        <li class="list-group-item">Hair: ${petObj['content']['hair']}</li>
+                        <li class="list-group-item">Coat: ${petObj['content']['coat']}</li>
                       </ul>
                     </div>`;
       
