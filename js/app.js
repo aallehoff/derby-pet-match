@@ -19,31 +19,38 @@ function petMatch() {
   response[question] = "petMatch";
   question += 1;
   $('#q1').show();
-  
-function nextQuestion() {
-  console.log(response);
-      $('#q' + question).hide();
-      question++;
-      $('#q' + question).show();
-}
+
+  function nextQuestion() {
+    console.log(response);
+    $('#q' + question).hide();
+    question++;
+    $('#q' + question).show();
+  }
 
   $('.appQuestion').on('click', 'button', (event) => {
     if (event.target.attributes['data-input'] !== undefined) {
-      //      console.log("Input: Not yet implemented")
       for (let i = 0; i < $(event.target).siblings('input').length; i++) {
         if ($(event.target).siblings('input')[i].attributes['type'].nodeValue == "number") {
           response[question] = $($(event.target).siblings('input')[i]).val();
-          nextQuestion();
         } else if ($(event.target).siblings('input')[i].attributes['type'].nodeValue == "checkbox") {
-          console.log('Checkbox: not yet implemented');
+          //          console.log('Checkbox: not yet implemented');
+          if (!$.isArray(response[question])) {
+            response[question] = [];
+          }
+          if ($($(event.target).siblings('input')[i]).is(':checked')) {
+            response[question].push(
+              $(event.target).siblings('input')[i].attributes['data-selection'].nodeValue
+            );
+          }
+
         }
       }
     } else {
       response[question] = event.target.attributes['data-selection'].nodeValue;
-      nextQuestion()
 
     }
 
+          nextQuestion();
 
   })
 }
