@@ -2,46 +2,353 @@
   {
     "personality": "",
     "rooms": 0,
-    "yard": false,
+    "yard": true,
     "presence": ["", "", ""],
     "content": {
               "species": "",
               "age": 0,
               "sex": "",
               "name": "",
-              "description": "",
-              "biography": "",
+              "hair": "",
+              "coat": "",
+              "bio": "",
               "imageSrc": ""
     }
   },
   {
-    "personality": "introverted",
-    "rooms": 2,
-    "yard": false,
-    "presence": ["children", "dogs"],
-    "content": {
-              "species": "cat",
-              "age": 3,
-              "sex": "female",
-              "name": "ExampleCatFemale",
-              "description": "calico",
-              "biography": "This is an example female cat.",
-              "imageSrc": ""
-    }
-  },
-  {
-    "personality": "extroverted",
+    "personality": "introvert",
     "rooms": 3,
     "yard": true,
-    "presence": ["children", "dogs"],
+    "presence": ["child", "cat", "dog"],
+    "content": {
+              "species": "cat",
+              "age": 5,
+              "sex": "female",
+              "name": "Posey",
+              "hair": "short",
+              "coat": "calico",
+              "bio": "Posey loves to spend time outdoors during the day, and snuggle up next to you at night. Very low maintenance.",
+              "imageSrc": "img/cats/calico.jpg"
+    }
+  },
+  {
+    "personality": "introvert",
+    "rooms": 15,
+    "yard": true,
+    "presence": [""],
+    "content": {
+              "species": "cheetah",
+              "age": 7,
+              "sex": "male",
+              "name": "Jogger",
+              "hair": "short",
+              "coat": "cheetah-print",
+              "bio": "Jogger isn't exactly a housecat. He needs a lot of space, a lot of exercise, and a lot of prey. For experienced cat owners only.",
+              "imageSrc": "img/cats/cheetah.jpg"
+    }
+  },
+  {
+    "personality": "introvert",
+    "rooms": 2,
+    "yard": false,
+    "presence": ["child", "cat", "dog"],
+    "content": {
+              "species": "cat",
+              "age": 4,
+              "sex": "female",
+              "name": "Fluff",
+              "hair": "medium",
+              "coat": "persian",
+              "bio": "Fluff loves to play with long snake-like toys, and chase lasers around the house. Very distinguished.",
+              "imageSrc": "img/cats/persian.jpg"
+    }
+  },
+  {
+    "personality": "introvert",
+    "rooms": 3,
+    "yard": false,
+    "presence": ["child", "cat"],
+    "content": {
+              "species": "cat",
+              "age": 6,
+              "sex": "male",
+              "name": "Splotch",
+              "hair": "medium",
+              "coat": "siamese",
+              "bio": "Always on the lookout, Splotch likes to rest wherever he can see whatever's going on! Not a fan of dogs.",
+              "imageSrc": "img/cats/siamese.jpg"
+    }
+  },{
+    "personality": "introvert",
+    "rooms": 2,
+    "yard": false,
+    "presence": ["child", "cat", "dog"],
+    "content": {
+              "species": "cat",
+              "age": 2,
+              "sex": "female",
+              "name": "Frost",
+              "hair": "short",
+              "coat": "solid white",
+              "bio": "Frost is a young adult cat with a positive outlook on life! Great cat for a first time owner.",
+              "imageSrc": "img/cats/solid_white.jpg"
+    }
+  },
+  {
+    "personality": "introvert",
+    "rooms": 3,
+    "yard": false,
+    "presence": ["child", "cat"],
+    "content": {
+              "species": "cat",
+              "age": 5,
+              "sex": "male",
+              "name": "Pharoah",
+              "hair": "bald",
+              "coat": "solid tan",
+              "bio": "Bald cats are great for households with allergies. Pharaoah would be happy to make your acquaintance.",
+              "imageSrc": "img/cats/sphinx.jpg"
+    }
+  },
+  {
+    "personality": "introvert",
+    "rooms": 4,
+    "yard": false,
+    "presence": ["child", "cat", "dog"],
+    "content": {
+              "species": "cat",
+              "age": 7,
+              "sex": "male",
+              "name": "Freebie",
+              "hair": "short",
+              "coat": "brown/white tabby",
+              "bio": "Freebie needs a lot of space to spread his legs in. Remains calm, cool, and collected at all times.",
+              "imageSrc": "img/cats/tabby_brown_white.jpg"
+    }
+  },
+  {
+    "personality": "introvert",
+    "rooms": 2,
+    "yard": false,
+    "presence": ["child", "dog"],
+    "content": {
+              "species": "cat",
+              "age": 11,
+              "sex": "female",
+              "name": "Speck",
+              "hair": "long",
+              "coat": "grey/white tabby",
+              "bio": "Speck is an old girl who likes to spend her evenings at home, preferably reading a good book... or laying on one at least. Not a fan of inter-feline politics.",
+              "imageSrc": "img/cats/tabby_grey_white.jpg"
+    }
+  },
+  {
+    "personality": "extrovert",
+    "rooms": 3,
+    "yard": true,
+    "presence": ["child", "cat", "dog"],
+    "content": {
+              "species": "cat",
+              "age": 6,
+              "sex": "male",
+              "name": "Dandelion",
+              "hair": "short",
+              "coat": "orange tabby",
+              "bio": "Dandelion's favorite passtime is keeping your yard free of bugs and mice. Freespirited.",
+              "imageSrc": "img/cats/tabby_orange_1.jpg"
+    }
+  },
+  {
+    "personality": "extrovert",
+    "rooms": 4,
+    "yard": false,
+    "presence": ["child", "cat", "dog"],
+    "content": {
+              "species": "cat",
+              "age": 9,
+              "sex": "male",
+              "name": "Chubster",
+              "hair": "short",
+              "coat": "orange tabby",
+              "bio": "Chubster wants all the attention! It doesn't matter where it's coming from, so long as it's good. Frequent binge eater.",
+              "imageSrc": "img/cats/tabby_orange_2.jpg"
+    }
+  },
+  {
+    "personality": "introvert",
+    "rooms": 3,
+    "yard": false,
+    "presence": ["child", "cat", "dog"],
+    "content": {
+              "species": "cat",
+              "age": 1,
+              "sex": "male",
+              "name": "Curiosity",
+              "hair": "short",
+              "coat": "orange/white tabby",
+              "bio": "Curiosity's name fits his personality. Don't be surprised if you find him stuck somewhere he doesn't belong!",
+              "imageSrc": "img/cats/tabby_orange_white_kitten.jpg"
+    }
+  },
+  {
+    "personality": "introvert",
+    "rooms": 15,
+    "yard": true,
+    "presence": [""],
+    "content": {
+              "species": "tiger",
+              "age": 12,
+              "sex": "male",
+              "name": "Castle",
+              "hair": "medium",
+              "coat": "tiger-print",
+              "bio": "Castle is literally a tiger. He showed up one day and the local zoo claims to have never seen him before... Maybe not the best pet?",
+              "imageSrc": "img/cats/tiger.jpg"
+    }
+  },
+  {
+    "personality": "introvert",
+    "rooms": 2,
+    "yard": false,
+    "presence": ["child"],
+    "content": {
+              "species": "cat",
+              "age": 4,
+              "sex": "female",
+              "name": "Squeak",
+              "hair": "short",
+              "coat": "tortoiseshell",
+              "bio": "Squeak is a very timid girl. She likes children, but anything else will scare her away!",
+              "imageSrc": "img/cats/tortie_1.jpg"
+    }
+  },
+  {
+    "personality": "introvert",
+    "rooms": 2,
+    "yard": false,
+    "presence": ["child", "dog"],
+    "content": {
+              "species": "cat",
+              "age": 5,
+              "sex": "female",
+              "name": "Pluck",
+              "hair": "medium",
+              "coat": "tortoiseshell",
+              "bio": "Pluck has a personality all her own. You'll have to meet her to know what we mean.",
+              "imageSrc": "img/cats/tortie_2.jpg"
+    }
+  },
+  {
+    "personality": "extrovert",
+    "rooms": 1,
+    "yard": true,
+    "presence": ["cat", "dog"],
+    "content": {
+              "species": "dog",
+              "age": 1,
+              "sex": "male",
+              "name": "Espirito",
+              "hair": "short",
+              "coat": "solid tan",
+              "bio": "Espirito is not a fan of being handled by children. Otherwise, a great puppy with a lot of potential.",
+              "imageSrc": "img/dogs/chihuahua_puppy.jpg"
+    }
+  },
+  {
+    "personality": "extrovert",
+    "rooms": 2,
+    "yard": true,
+    "presence": ["child", "cat", "dog"],
     "content": {
               "species": "dog",
               "age": 7,
               "sex": "male",
-              "name": "ExampleDogMale",
-              "description": "brindle",
-              "biography": "This is an example male dog.",
-              "imageSrc": ""
+              "name": "Classic",
+              "hair": "short",
+              "coat": "solid brown",
+              "bio": "Classic loves to dig, and dig, and dig. And dig some more! Hope you have a big yard...",
+              "imageSrc": "img/dogs/dachshund.jpg"
+    }
+  },
+  {
+    "personality": "extrovert",
+    "rooms": 4,
+    "yard": true,
+    "presence": ["child", "cat", "dog"],
+    "content": {
+              "species": "dog",
+              "age": 10,
+              "sex": "female",
+              "name": "Spot",
+              "hair": "short",
+              "coat": "black/white spotted",
+              "bio": "Spot dreams of working in a firehouse, but will settle for being warm next to your fireplace.",
+              "imageSrc": "img/dogs/dalmatian.jpg"
+    }
+  },
+  {
+    "personality": "extrovert",
+    "rooms": 15,
+    "yard": true,
+    "presence": [""],
+    "content": {
+              "species": "fox",
+              "age": 4,
+              "sex": "male",
+              "name": "Blaze",
+              "hair": "medium",
+              "coat": "tricolor",
+              "bio": "Blaze isn't you're average dog. In fact, there's a possibility that he isn't a dog at all...",
+              "imageSrc": "img/dogs/fox.jpg"
+    }
+  },
+  {
+    "personality": "extrovert",
+    "rooms": 3,
+    "yard": true,
+    "presence": ["child", "cat"],
+    "content": {
+              "species": "dog",
+              "age": 10,
+              "sex": "female",
+              "name": "Softball",
+              "hair": "medium",
+              "coat": "tricolor",
+              "bio": "Softball likes to be in control. As a result, she often doesn't get along with her own kind.",
+              "imageSrc": "img/dogs/german_shepherd_1.jpg"
+    }
+  },
+  {
+    "personality": "extrovert",
+    "rooms": 3,
+    "yard": true,
+    "presence": ["child", "cat", "dog"],
+    "content": {
+              "species": "dog",
+              "age": 8,
+              "sex": "male",
+              "name": "Frontier",
+              "hair": "medium",
+              "coat": "tricolor",
+              "bio": "Frontier is a true working dog at heart. Give him something to carry or chase after and he'll be happy.",
+              "imageSrc": "img/dogs/german_shepherd_2.jpg"
+    }
+  },
+  {
+    "personality": "",
+    "rooms": 2,
+    "yard": true,
+    "presence": ["child", "cat", "dog"],
+    "content": {
+              "species": "dog",
+              "age": 1,
+              "sex": "female",
+              "name": "Powdercoat",
+              "hair": "medium",
+              "coat": "bicolor",
+              "bio": "Powdercoat is small now, but she needs room to grow! Soon she'll be almost big as you!",
+              "imageSrc": "img/dogs/husky_puppy.jpg"
     }
   }
+  
 ]
