@@ -2,20 +2,77 @@
 
 let question = 0;
 let answers = [];
+let labels = ["function", "personality", "rooms", "yard", "presence"];
 
-/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-  BEGIN .appInitial #viewAll onClick
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
-$('.appInitial').on('click', '#viewAll', () => {
-  // Hide .appIntial and set values for debug.
-  $('.appInitial').hide();
-  question = -1;
-  answers[question] = "viewAll";
+function recordAnswer(event, array, index) {
+  // Record the data-selection value of this event's target to the array at index.
+  if ($(event.target).attr('data-input') !== undefined) {
+    // Accept INPUT elements.
+    $(event.target).siblings('input').each((i, elem) => {
+      if ($(elem).attr('type') == "number") {
+        // Input Type: NUMBER
+        array[index] = $(elem).val();
+      } else if ($(elem).attr('type') == "checkbox") {
+        // Input Type: CHECKBOX
+        if (!$.isArray(array[index])) {
+          // Create an array to store checkbox values in.
+          array[index] = [];
+        }
+        if ($(elem).is(':checked')) {
+          // Store checkbox values in array.
+          array[index].push($(elem).attr('data-selection'));
+        }
+      }
+    });
+  } else {
+    // Accept BUTTON elements.
+    array[index] = $(event.target).attr('data-selection');
+  }
+} // END DEFINITION of recordAnswer
 
-  // Fetch JSON data and print it to div.appOutput.
+function printResults(selector, array, keys) {
+  // Combine keys with array.
+  let response = {};
+  for (let i = 0; i < keys.length; i++) {
+    response[keys[i]] = array[i];
+  }
+  console.log(response);
+
+  // Fetch JSON data, compare to array, output to selector.
   $.getJSON('js/data.json', (jsonData) => {
-    // Perform action on each object in the asynchronously returned array.
+    // Fetch data from JSON file.
     $.each(jsonData, (i, petObj) => {
+      // For each object in JSON array...
+      console.log(petObj);
+      
+      // Compare response to petObj if using petMatch.
+      if (response['function'] == "petMatch") {
+        let tolerable;
+        
+        $.each(response['presence'], (i, string) => {
+          console.log(this);
+          let result = 0;
+          if (petObj['presence'].includes(string)) {
+            result += 0;
+          } else {
+            result++;
+          }
+          tolerable = !result;
+          console.log(result, tolerable);
+        })
+        
+        let skip = !( // The inverse of...
+                      (response['personality'] == petObj['personality']) // Matching personality.
+                      && (Number(response['rooms']) >= petObj['rooms']) // Equal or more rooms.
+                      && !((Boolean(response['yard']) && false) && (petObj['yard'] && true)) // Not if the applicant doesn't have a yard when the pet needs one.
+                      && tolerable
+                    ) // END VARIABLE skip
+        if (skip) {
+          // Skip to next in each loop if and only if no match.
+          return true;
+        }
+      }
+
       // Template output.
       let output = `<div class="card">
                       <div class="card-body">
@@ -29,52 +86,45 @@ $('.appInitial').on('click', '#viewAll', () => {
                         <li class="list-group-item">Sex: ${petObj['content']['sex']}</li>
                       </ul>
                     </div>`;
+      
       // Append output.
-      $('.appOutput').append(output);
+      $(selector).append(output);
+    }); // END $.each()
+  }); // END $.getJSON()
+} // END DEFINITION of printResults
 
-    });
-  })
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  BEGIN .appInitial #viewAll onClick
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+$('.appInitial').on('click', '#viewAll', () => {
+  $('.appInitial').hide();
+  answers[question] = "viewAll";
+  question = -1;
+
+  printResults('.appOutput', answers, labels);
 }); // END .appInitial #viewAll onClick
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
   BEGIN .appInitial #petMatch onClick
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 $('.appInitial').on('click', '#petMatch', () => {
-  //Hide .appInitial and set values to start questions.
   $('.appInitial').hide();
   answers[question] = "petMatch";
   question = 1;
   $('#q1').show();
 
-  // BEGIN .appQuestion button onClick
-  $('.appQuestion').on('click', 'button', (event) => {
-    // Immediately hide question.
+  // BEGIN .appQuestion .nextQuestion onClick
+  $('.appQuestion').on('click', '.nextQuestion', (event) => {
     $('#q' + question).hide();
-
-    // Record answer for current question.
-    if ($(event.target).attr('data-input') !== undefined) {
-      // Accept data-selection from input elements.
-      $(event.target).siblings('input').each((i, e) => {
-        if ($(e).attr('type') == "number") {
-          answers[question] = $(e).val();
-        } else if ($(e).attr('type') == "checkbox") {
-          if (!$.isArray(answers[question])) {
-            // Create an array to store checkbox values in.
-            answers[question] = [];
-          }
-          if ($(e).is(':checked')) {
-            // Store checkbox values in array.
-            answers[question].push($(e).attr('data-selection'))
-          }
-        }
-      });
-    } else {
-      // Accept data-selection for button elements.
-      answers[question] = $(event.target).attr('data-selection');
-    }
-
-    // Increment counter and display next question.
+    recordAnswer(event, answers, question);
     question++;
     $('#q' + question).show();
   }); // END .appQuestion button onClick
+
+  //BEGIN .appQuestion .finalQuestion onClick
+  $('.appQuestion').on('click', '.finalQuestion', (event) => {
+    $('#q' + question).hide();
+    recordAnswer(event, answers, question);
+    printResults('.appOutput', answers, labels);
+  }); // END .appQuestion .finalQuestion onClick
 }); // END .appInitial #petMatch onClick

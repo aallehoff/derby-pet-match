@@ -1,9 +1,9 @@
 [
   {
-    "compatiblePersonality": "",
-    "needsXRooms": 0,
-    "needsYard": false,
-    "tolerates": ["", "", ""],
+    "personality": "",
+    "rooms": 0,
+    "yard": false,
+    "presence": ["", "", ""],
     "content": {
               "species": "",
               "age": 0,
@@ -15,10 +15,10 @@
     }
   },
   {
-    "compatiblePersonality": "introverted",
-    "needsXRooms": 2,
-    "needsYard": false,
-    "tolerates": ["children", "dogs"],
+    "personality": "introverted",
+    "rooms": 2,
+    "yard": false,
+    "presence": ["children", "dogs"],
     "content": {
               "species": "cat",
               "age": 3,
@@ -30,10 +30,10 @@
     }
   },
   {
-    "compatiblePersonality": "extroverted",
-    "needsXRooms": 3,
-    "needsYard": true,
-    "tolerates": ["children", "dogs"],
+    "personality": "extroverted",
+    "rooms": 3,
+    "yard": true,
+    "presence": ["children", "dogs"],
     "content": {
               "species": "dog",
               "age": 7,

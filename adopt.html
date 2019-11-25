@@ -57,8 +57,8 @@
             <h2>What kind of personality do you have?</h2><hr>
             <p>We know you're a caring person because you're interested in adoption. Some pets are better suited to certain human lifestyles. Do you have an introverted, or an extroverted personality?<br><br>
             
-            <button class="button" data-selection="introverted">I'm an introvert</button>
-            <button class="button" data-selection="extroverted">I'm an extrovert</button>
+            <button class="button nextQuestion" data-selection="introverted">I'm an introvert</button>
+            <button class="button nextQuestion" data-selection="extroverted">I'm an extrovert</button>
             </p>
           </div>
           
@@ -66,7 +66,7 @@
             <h2>How big is your living space?</h2>
             <p>The amount of space a pet needs to live comfortable can vary dramatically based on multiple factors, such as species, breed, sex, etc. It's okay if you don't own your own home, we just need to know how many rooms you have.<br><br>
             I have <input type="number"> rooms.<br>
-            <button class="button" data-input>Proceed</button>
+            <button class="button nextQuestion" data-input>Proceed</button>
             </p>
           </div>
           
@@ -74,8 +74,8 @@
             <h2>Do you have access to a yard?</h2>
             <p>Some pets require daily access to the outdoors, such as a yard. Can you provide or have access to such a space?<br><br>
             
-              <button class="button" data-selection="true">I have a yard</button>
-              <button class="button" data-selection="false">I do not have a yard</button>
+              <button class="button nextQuestion" data-selection="true">I have a yard</button>
+              <button class="button nextQuestion" data-selection="">I do not have a yard</button><!-- This data-selection is deliberately empty; empty strings evaluate to false in JS -->
             </p>
           
           </div>
@@ -91,7 +91,7 @@
           <input type="checkbox" id="dogs" data-selection="dogs">
           <label for="dogs">Dogs</label>
           
-          <button class="button" data-input>Show me my matches!</button>
+          <button class="button finalQuestion" data-input>Show me my matches!</button>
           </p>
           
           </div>
