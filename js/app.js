@@ -1,7 +1,7 @@
 /* eslint-env es6, browser, jquery */
 
 let question = 0;
-let response = [];
+let answers = [];
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
   BEGIN .appInitial #viewAll onClick
@@ -10,7 +10,7 @@ $('.appInitial').on('click', '#viewAll', () => {
   // Hide .appIntial and set values for debug.
   $('.appInitial').hide();
   question = -1;
-  response[question] = "viewAll";
+  answers[question] = "viewAll";
 
   // Fetch JSON data and print it to div.appOutput.
   $.getJSON('js/data.json', (jsonData) => {
@@ -42,7 +42,7 @@ $('.appInitial').on('click', '#viewAll', () => {
 $('.appInitial').on('click', '#petMatch', () => {
   //Hide .appInitial and set values to start questions.
   $('.appInitial').hide();
-  response[question] = "petMatch";
+  answers[question] = "petMatch";
   question = 1;
   $('#q1').show();
 
@@ -51,35 +51,30 @@ $('.appInitial').on('click', '#petMatch', () => {
     // Immediately hide question.
     $('#q' + question).hide();
 
-    // Record values into response.
-    if (event.target.attributes['data-input'] !== undefined) {
-      // If data-input attribute is present...
-      for (let i = 0; i < $(event.target).siblings('input').length; i++) {
-        // ...for each sibling...
-        if ($(event.target).siblings('input')[i].attributes['type'].nodeValue == "number") {
-          // ...if input type is number, record value of input into response.
-          response[question] = $($(event.target).siblings('input')[i]).val();
-        } else if ($(event.target).siblings('input')[i].attributes['type'].nodeValue == "checkbox") {
-          // ...else if input type is checkbox...
-          if (!$.isArray(response[question])) {
-            // ...create an array...
-            response[question] = [];
+    // Record answer for current question.
+    if ($(event.target).attr('data-input') !== undefined) {
+      // Accept data-selection from input elements.
+      $(event.target).siblings('input').each((i, e) => {
+        if ($(e).attr('type') == "number") {
+          answers[question] = $(e).val();
+        } else if ($(e).attr('type') == "checkbox") {
+          if (!$.isArray(answers[question])) {
+            // Create an array to store checkbox values in.
+            answers[question] = [];
           }
-          // ...then record the value of each checked box into response.
-          if ($($(event.target).siblings('input')[i]).is(':checked')) {
-            response[question].push(
-              $(event.target).siblings('input')[i].attributes['data-selection'].nodeValue
-            );
+          if ($(e).is(':checked')) {
+            // Store checkbox values in array.
+            answers[question].push($(e).attr('data-selection'))
           }
         }
-      }
+      });
     } else {
-      // Otherwise, record value of data-selection attribute into response.
-      response[question] = event.target.attributes['data-selection'].nodeValue;
+      // Accept data-selection for button elements.
+      answers[question] = $(event.target).attr('data-selection');
     }
 
     // Increment counter and display next question.
     question++;
     $('#q' + question).show();
-  }) // END .appQuestion button onClick
+  }); // END .appQuestion button onClick
 }); // END .appInitial #petMatch onClick
