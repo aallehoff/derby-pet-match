@@ -11,5 +11,31 @@
               "description": "",
               "biography": ""
     }
+  },
+  {
+    "compatiblePersonality": "introverted",
+    "needsXRooms": 2,
+    "needsYard": false,
+    "tolerates": ["children", "dogs"],
+    "content": {
+              "species": "cat",
+              "age": 3,
+              "sex": "female",
+              "description": "example female cat",
+              "biography": "This is an example female cat."
+    }
+  },
+  {
+    "compatiblePersonality": "extroverted",
+    "needsXRooms": 3,
+    "needsYard": true,
+    "tolerates": ["children", "dogs"],
+    "content": {
+              "species": "dog",
+              "age": 7,
+              "sex": "male",
+              "description": "example male dog",
+              "biography": "This is an example male dog."
+    }
   }
 ]
