@@ -46,11 +46,11 @@ $('.appInitial').on('click', '#petMatch', () => {
   question = 1;
   $('#q1').show();
 
-  // For each click of a button...
+  // BEGIN .appQuestion button onClick
   $('.appQuestion').on('click', 'button', (event) => {
     // Immediately hide question.
     $('#q' + question).hide();
-    
+
     // Record values into response.
     if (event.target.attributes['data-input'] !== undefined) {
       // If data-input attribute is present...
@@ -81,7 +81,5 @@ $('.appInitial').on('click', '#petMatch', () => {
     // Increment counter and display next question.
     question++;
     $('#q' + question).show();
-
-  })
-
+  }) // END .appQuestion button onClick
 }); // END .appInitial #petMatch onClick
