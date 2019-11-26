@@ -1,3 +1,22 @@
 .appQuestion {
   display: none;
 } /* To be overriden in app.js */
+
+#override {
+  background-color: #e9edf6;
+}
+
+#override a {
+  color: #b59a9f;
+}
+
+#override .bg-primary,
+#override .btn-primary,
+#override .navbar-dark a{
+  background-color: #875535 !important;
+  color: #e9edf6 !important;
+}
+
+#override .jumbotron {
+  background-color: #d6bca8;
+}
