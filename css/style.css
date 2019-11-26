@@ -2,21 +2,57 @@
   display: none;
 } /* To be overriden in app.js */
 
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  COLORS
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+/*
+#e98e51, burnt sienna, main color;
+
+#f4f3ed, pampas, light shade;
+#3f5250, mineral green, dark shade;
+
+#9fa4a7, gray chateau, light accent;
+#a17952, limed oak, dark accent;
+
+:root {
+  --primary: #e98e51;
+  --info: #3f5250;
+  --success: #7ba550;
+  --warning: #f89518;
+  --danger: #f44336;
+}
+
+*/
+
+
 #override {
-  background-color: #e9edf6;
+  background-color: #f4f3ed;
+  color: #3f5250;
 }
 
 #override a {
-  color: #b59a9f;
+  color: #e98e51;
 }
 
-#override .bg-primary,
-#override .btn-primary,
-#override .navbar-dark a{
-  background-color: #875535 !important;
-  color: #e9edf6 !important;
+#override .bg-primary {
+  background-color: #3f5250 !important;
+}
+
+#override .navbar-dark,
+#override .navbar-brand,
+#override .navbar-nav a {
+  color: #f4f3ed;
 }
 
 #override .jumbotron {
-  background-color: #d6bca8;
+  background-color: #e98e51;
+  color: #f4f3ed;
+}
+
+#override .btn-dark {
+  background-color: #3f5250;
+  color: #f4f3ed;
+  border-color: #3f5250;
 }
