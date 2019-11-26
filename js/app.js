@@ -36,29 +36,26 @@ function printResults(selector, array, keys) {
   for (let i = 0; i < keys.length; i++) {
     response[keys[i]] = array[i];
   }
-  console.log(response);
 
   // Fetch JSON data, compare to array, output to selector.
   $.getJSON('js/data.json', (jsonData) => {
     // Fetch data from JSON file.
     $.each(jsonData, (i, petObj) => {
       // For each object in JSON array...
-      console.log(petObj);
       
       // Compare response to petObj if using petMatch.
       if (response['function'] == "petMatch") {
         let tolerable;
         
         $.each(response['presence'], (i, string) => {
-          console.log(this);
-          let result = 0;
+          // Compare petObj to response and generate a score. A non-zero score indicates an undesirable match.
+          let score = 0;
           if (petObj['presence'].includes(string)) {
-            result += 0;
+            score += 0;
           } else {
-            result++;
+            score++;
           }
-          tolerable = !result;
-          console.log(result, tolerable);
+          tolerable = !score;
         })
         
         let skip = !( // The inverse of...

@@ -1,21 +1,5 @@
 [
   {
-    "personality": "",
-    "rooms": 0,
-    "yard": true,
-    "presence": ["", "", ""],
-    "content": {
-              "species": "",
-              "age": 0,
-              "sex": "",
-              "name": "",
-              "hair": "",
-              "coat": "",
-              "bio": "",
-              "imageSrc": ""
-    }
-  },
-  {
     "personality": "introvert",
     "rooms": 3,
     "yard": true,
@@ -167,10 +151,10 @@
               "species": "cat",
               "age": 9,
               "sex": "male",
-              "name": "Chubster",
+              "name": "Chonk",
               "hair": "short",
               "coat": "orange tabby",
-              "bio": "Chubster wants all the attention! It doesn't matter where it's coming from, so long as it's good. Frequent binge eater.",
+              "bio": "Chonk wants all the attention! It doesn't matter where it's coming from, so long as it's good. Frequent binge eater.",
               "imageSrc": "img/cats/tabby_orange_2.jpg"
     }
   },
@@ -349,6 +333,117 @@
               "bio": "Powdercoat is small now, but she needs room to grow! Soon she'll be almost big as you!",
               "imageSrc": "img/dogs/husky_puppy.jpg"
     }
+  },
+  {
+    "personality": "introvert",
+    "rooms": 2,
+    "yard": true,
+    "presence": ["child", "cat", "dog"],
+    "content": {
+              "species": "dog",
+              "age": 5,
+              "sex": "female",
+              "name": "Mocha",
+              "hair": "short",
+              "coat": "solid brown",
+              "bio": "Mocha loves seasonal flavors. That's why you'll always find her sniffing up what you're cooking!",
+              "imageSrc": "img/dogs/lab_chocolate.jpg"
+    }
+  },
+  {
+    "personality": "extrovert",
+    "rooms": 2,
+    "yard": true,
+    "presence": ["child", "cat", "dog"],
+    "content": {
+              "species": "dog",
+              "age": 6,
+              "sex": "male",
+              "name": "Chaser",
+              "hair": "medium",
+              "coat": "solid tan",
+              "bio": "Chaser is only interested in one thing: catching the ball. No matter how many times you throw it, it'll always be as interesting as the first time to him.",
+              "imageSrc": "img/dogs/lab_golden.jpg"
+    }
+  },
+  {
+    "personality": "extrovert",
+    "rooms": 2,
+    "yard": true,
+    "presence": ["cat", "dog"],
+    "content": {
+              "species": "dog",
+              "age": 3,
+              "sex": "male",
+              "name": "Duke",
+              "hair": "short",
+              "coat": "bicolor",
+              "bio": "Duke loves to ride in the car. Next time you go to get a cheeseburger bring him along, he'll make sure you look cool while doing it.",
+              "imageSrc": "img/dogs/pitbull.jpg"
+    }
+  },
+  {
+    "personality": "extrovert",
+    "rooms": 1,
+    "yard": true,
+    "presence": ["child", "cat", "dog"],
+    "content": {
+              "species": "dog",
+              "age": 7,
+              "sex": "male",
+              "name": "Rex",
+              "hair": "short",
+              "coat": "bicolor",
+              "bio": "There's a whole lot of personality in such a little package with Rex. He's sure to liven up your home with his presence.",
+              "imageSrc": "img/dogs/pug.jpg"
+    }
+  },
+  {
+    "personality": "introvert",
+    "rooms": 3,
+    "yard": true,
+    "presence": ["child", "cat", "dog"],
+    "content": {
+              "species": "dog",
+              "age": 7,
+              "sex": "female",
+              "name": "Belle",
+              "hair": "short",
+              "coat": "bicolor",
+              "bio": "Belle is a very classy lady who loves the finer things in life. A former track star, she's now retired and looking for a new friend to spend out her days with.",
+              "imageSrc": "img/dogs/saluki.jpg"
+    }
+  },
+  {
+    "personality": "extrovert",
+    "rooms": 1,
+    "yard": true,
+    "presence": ["child", "cat"],
+    "content": {
+              "species": "dog",
+              "age": 4,
+              "sex": "female",
+              "name": "Matcha",
+              "hair": "medium",
+              "coat": "bicolor",
+              "bio": "Matcha gets so amped up you'll think she's had three cups of coffee for breakfast. But really she's just so full of affection she's bursting at the seams!",
+              "imageSrc": "img/dogs/terrier.jpg"
+    }
+  },
+  {
+    "personality": "extrovert",
+    "rooms": 15,
+    "yard": true,
+    "presence": ["dog"],
+    "content": {
+              "species": "wolf",
+              "age": 9,
+              "sex": "male",
+              "name": "Timber",
+              "hair": "medium",
+              "coat": "tricolor",
+              "bio": "Timber loves long walks in the forest, and inviting his friends over for a dinner party... every night. Maybe not suitable for an indoor pet.",
+              "imageSrc": "img/dogs/wolf.jpg"
+    }
   }
-  
 ]
