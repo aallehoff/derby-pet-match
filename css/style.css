@@ -56,3 +56,8 @@
   color: #f4f3ed;
   border-color: #3f5250;
 }
+
+#override .card,
+#override .list-group-item {
+  background-color: #f4f3ed;
+}
