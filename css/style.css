@@ -9,6 +9,7 @@
 
 /*
 #e98e51, burnt sienna, main color;
+#ff4500, accessible alternative to main color;
 
 #f4f3ed, pampas, light shade;
 #3f5250, mineral green, dark shade;
@@ -33,7 +34,7 @@
 }
 
 #override a {
-  color: #e98e51;
+  color: #ff4500;
 }
 
 #override .bg-primary {
@@ -47,7 +48,7 @@
 }
 
 #override .jumbotron {
-  background-color: #e98e51;
+  background-color: #ff4500;
   color: #f4f3ed;
 }
 
