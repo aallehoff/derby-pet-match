@@ -30,7 +30,9 @@ function recordAnswer(event, array, index) {
   }
 } // END DEFINITION of recordAnswer
 
-
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  BEGIN printResults() DEFINITION
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 function printResults(selector, array, keys) {
   // Create a dictionary from labels and answers.
   let response = {};
@@ -70,18 +72,23 @@ function printResults(selector, array, keys) {
           */
         })
 
-        let skip = !( // The inverse of...
-          (response['personality'] == petObj['personality']) // Matching personality.
-          &&
-          (Number(response['rooms']) >= petObj['rooms']) // Equal or more rooms.
-          &&
-          !((Boolean(response['yard']) && false) && (petObj['yard'] && true)) // Not if the applicant doesn't have a yard when the pet needs one.
-          &&
-          tolerable
-        ) // END VARIABLE skip
+        // Determine whether we need to skip this object in the array.
+        let skip = !(
+          (response['personality'] == petObj['personality'])
+          && (Number(response['rooms']) >= petObj['rooms'])
+          && !((Boolean(response['yard']) && false) && (petObj['yard'] && true))
+          && tolerable
+          /*
+            Most of the process of determining if we need to skip can be accomplished using boolean logic. For the one part that cannot, we use a seperate function to store a boolean in the tolerable variable so that it may be compared against.
+          */
+        )
+        
         if (skip) {
           // Skip to next in each loop if and only if no match.
           return true;
+          /*
+            The $.each() loop that contains this block of code listens for returned values. Returning true causes the loop to skip to the next item in the loop (same as continue). Returning false would halt execution of the loop entirely (same as break).
+          */
         }
       }
 
