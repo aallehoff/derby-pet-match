@@ -30,40 +30,55 @@ function recordAnswer(event, array, index) {
   }
 } // END DEFINITION of recordAnswer
 
+
 function printResults(selector, array, keys) {
-  // Combine keys with array.
+  // Create a dictionary from labels and answers.
   let response = {};
   for (let i = 0; i < keys.length; i++) {
     response[keys[i]] = array[i];
+    /*
+      This allows us to easily access the values by name instead of by index in an array.
+    */
   }
 
-  // Fetch JSON data, compare to array, output to selector.
+  // Fetch JSON data, find matches, and output to document.
   $.getJSON('js/data.json', (jsonData) => {
-    // Fetch data from JSON file.
     $.each(jsonData, (i, petObj) => {
-      // For each object in JSON array...
-      
-      // Compare response to petObj if using petMatch.
+      /*
+        For each object in the JSON array, we compare the object's properties to the values stored in our response dictionary to determine if there is a match. If there is a match, we fill a template and output to the document.
+      */
+
+      // If the user chooses petMatch, attempt to find matches.
       if (response['function'] == "petMatch") {
-        let tolerable;
+        /*
+          The important difference between viewAll and petMatch is what pets we *exclude* from the resultant matches. Therefore when deciding which pets to output to the page in petMatch we only need to identify which pets need to be skipped.
+        */
         
+        // Compare response['presence'] and petObj['presence'] arrays.
+        let tolerable;
         $.each(response['presence'], (i, string) => {
-          // Compare petObj to response and generate a score. A non-zero score indicates an undesirable match.
           let score = 0;
           if (petObj['presence'].includes(string)) {
+            // We use an if loop here because the same functionality cannot be achieved using boolean logic alone.
             score += 0;
           } else {
             score++;
           }
           tolerable = !score;
+          /*
+            We exploit the fact that the inverse of a number returns a boolean to determine if there is a match. For each value stored in response['presence'], if that value does not exist in petObj we increment score and move on. A score of 0 indicates a compatible match, and we set tolerable to true. Otherwise, there is no match and tolerable is set to false.
+          */
         })
-        
+
         let skip = !( // The inverse of...
-                      (response['personality'] == petObj['personality']) // Matching personality.
-                      && (Number(response['rooms']) >= petObj['rooms']) // Equal or more rooms.
-                      && !((Boolean(response['yard']) && false) && (petObj['yard'] && true)) // Not if the applicant doesn't have a yard when the pet needs one.
-                      && tolerable
-                    ) // END VARIABLE skip
+          (response['personality'] == petObj['personality']) // Matching personality.
+          &&
+          (Number(response['rooms']) >= petObj['rooms']) // Equal or more rooms.
+          &&
+          !((Boolean(response['yard']) && false) && (petObj['yard'] && true)) // Not if the applicant doesn't have a yard when the pet needs one.
+          &&
+          tolerable
+        ) // END VARIABLE skip
         if (skip) {
           // Skip to next in each loop if and only if no match.
           return true;
@@ -85,7 +100,7 @@ function printResults(selector, array, keys) {
                         <li class="list-group-item">Coat: ${petObj['content']['coat']}</li>
                       </ul>
                     </div>`;
-      
+
       // Append output.
       $(selector).append(output);
     }); // END $.each()
