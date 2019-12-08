@@ -4,10 +4,16 @@ let question = 0;
 let answers = [];
 let labels = ["function", "personality", "rooms", "yard", "presence"];
 
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  BEGIN recordAnswer()
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 function recordAnswer(event, array, index) {
-  // Record the data-selection value of this event's target to the array at index.
+  // Takes a value from an event and inserts it into an array at an index.
   if ($(event.target).attr('data-input') !== undefined) {
-    // Accept INPUT elements.
+    /*
+      If the target <button> of the event has the custom 'data-input' attribute then the data needed is contained in a sibling <input>. This means we need to look for siblings to extract the data from.
+    */
     $(event.target).siblings('input').each((i, elem) => {
       if ($(elem).attr('type') == "number") {
         // Input Type: NUMBER
@@ -28,10 +34,10 @@ function recordAnswer(event, array, index) {
     // Accept BUTTON elements.
     array[index] = $(event.target).attr('data-selection');
   }
-} // END DEFINITION of recordAnswer
+} // END recordAnswer()
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-  BEGIN printResults() DEFINITION
+  BEGIN printResults()
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 function printResults(selector, array, keys) {
   // Create a dictionary from labels and answers.
@@ -112,11 +118,14 @@ function printResults(selector, array, keys) {
       $(selector).append(output);
     }); // END $.each()
   }); // END $.getJSON()
-} // END DEFINITION of printResults
+} // END printResults()
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
   BEGIN .appInitial #viewAll onClick
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/*
+  This event handler calls printResults() with arguments that will cause all pets to be printed to the document.
+*/
 $('.appInitial').on('click', '#viewAll', () => {
   $('.appInitial').hide();
   answers[question] = "viewAll";
@@ -128,7 +137,11 @@ $('.appInitial').on('click', '#viewAll', () => {
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
   BEGIN .appInitial #petMatch onClick
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/*
+  These event handlers initialize variables, record input, and call printResults() in such a way that only pets that match the user input will be printed to the document.
+*/
 $('.appInitial').on('click', '#petMatch', () => {
+  // Initialize for petMatch routine, and define handlers for accepting input and printing results.
   $('.appInitial').hide();
   answers[question] = "petMatch";
   question = 1;
@@ -136,6 +149,7 @@ $('.appInitial').on('click', '#petMatch', () => {
 
   // BEGIN .appQuestion .nextQuestion onClick
   $('.appQuestion').on('click', '.nextQuestion', (event) => {
+    // Record user's input.
     $('#q' + question).hide();
     recordAnswer(event, answers, question);
     question++;
@@ -144,6 +158,7 @@ $('.appInitial').on('click', '#petMatch', () => {
 
   //BEGIN .appQuestion .finalQuestion onClick
   $('.appQuestion').on('click', '.finalQuestion', (event) => {
+    // Print results of matching to page.
     $('#q' + question).hide();
     recordAnswer(event, answers, question);
     printResults('.appOutput', answers, labels);
