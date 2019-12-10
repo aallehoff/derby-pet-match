@@ -16,7 +16,7 @@
     <nav class="navbar navbar-expand-md navbar-dark bg-custom">
       <a class="navbar-brand" href="#">Derby Pet Match</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNav"><span class="navbar-toggler-icon"></span></button>
-      
+
       <div class="collapse navbar-collapse" id="collapsibleNav">
         <ul class="navbar-nav ml-md-auto">
           <li class="nav-item">
@@ -36,63 +36,66 @@
 
     </nav><!-- /.navbar -->
   </header>
-  
-      <div class="jumbotron" id="appPreamble">
-        <h1 class="display-5">Pet Adoption</h1><hr>
-      </div>
-  
-    <div class="container-fluid">
-      
-      <div id="appWrap">
-        <div id="appInput">
-          
-          <div class="card appInitial" id="q0">
-            <div class="card-body">
-              <h2 class="card-title">Let's begin!</h2><hr>
-              <p class="card-text">Would you like us to find a pet who best suits you and your home, or simply view all available pets?<br><br>
-              
+
+  <div class="jumbotron" id="appPreamble">
+    <h1 class="display-5">Pet Adoption</h1>
+    <hr>
+  </div>
+
+  <div class="container-fluid">
+
+    <div id="appWrap">
+      <div id="appInput">
+
+        <div class="card appInitial" id="q0">
+          <div class="card-body">
+            <h2 class="card-title">Let's begin!</h2>
+            <hr>
+            <p class="card-text">Would you like us to find a pet who best suits you and your home, or simply view all available pets?<br><br>
+
               <button class="btn btn-dark" id="viewAll" data-selection="viewAll">View all pets</button>
               <button class="btn btn-dark" id="petMatch" data-selection="petMatch">Find your match</button>
-              </p>
-            </div>
-          </div><!-- /.appInitial#q0 -->
-          
-          <div class="card appQuestion" id="q1">
-            <div class="card-body">
-              <h2 class="card-title">What kind of personality do you have?</h2><hr>
-              <p class="card-text">We know you're a caring person because you're interested in adoption. Some pets are better suited to certain human lifestyles. Do you have an introverted, or an extroverted personality?<br><br>
+            </p>
+          </div>
+        </div><!-- /.appInitial#q0 -->
+
+        <div class="card appQuestion" id="q1">
+          <div class="card-body">
+            <h2 class="card-title">What kind of personality do you have?</h2>
+            <hr>
+            <p class="card-text">We know you're a caring person because you're interested in adoption. Some pets are better suited to certain human lifestyles. Do you have an introverted, or an extroverted personality?<br><br>
 
               <button class="btn btn-dark nextQuestion" data-selection="introvert">I'm an introvert</button>
               <button class="btn btn-dark nextQuestion" data-selection="extrovert">I'm an extrovert</button>
-              </p>
-            </div>
-          </div><!-- /.appQuestion#q1 -->
-          
-          <div class="card appQuestion" id="q2">
-            <div class="card-body">
-              <h2 class="card-title">How big is your living space?</h2>
-              <p class="card-text">The amount of space a pet needs to live comfortable can vary dramatically based on multiple factors, such as species, breed, sex, etc. It's okay if you don't own your own home, we just need to know how many rooms you have.<br><br>
+            </p>
+          </div>
+        </div><!-- /.appQuestion#q1 -->
+
+        <div class="card appQuestion" id="q2">
+          <div class="card-body">
+            <h2 class="card-title">How big is your living space?</h2>
+            <p class="card-text">The amount of space a pet needs to live comfortable can vary dramatically based on multiple factors, such as species, breed, sex, etc. It's okay if you don't own your own home, we just need to know how many rooms you have.<br><br>
               I have <input type="number"> rooms.<br>
               <button class="btn btn-dark nextQuestion" data-input>Proceed</button>
-              </p>
-            </div>
-          </div><!-- /.appQuestion#q2 -->
-          
-          <div class="card appQuestion" id="q3">
-            <div class="card-body">
-              <h2 class="card-title">Do you have access to a yard?</h2>
-              <p class="card-text">Some pets require daily access to the outdoors, such as a yard. Can you provide or have access to such a space?<br><br>
+            </p>
+          </div>
+        </div><!-- /.appQuestion#q2 -->
 
-                <button class="btn btn-dark nextQuestion" data-selection="true">I have a yard</button>
-                <button class="btn btn-dark nextQuestion" data-selection="">I do not have a yard</button><!-- This data-selection is deliberately empty; empty strings evaluate to false in JS -->
-              </p>
-            </div>
-          </div><!-- /.appQuestion#q3 -->
-          
-          <div class="card appQuestion" id="q4">
-            <div class="card-body">
-              <h2 class="card-title">Which of the following do you already have?</h2>
-              <p class="card-text">Everyone has likes and dislikes, even pets! Some pets don't have the temperment to deal with children, or even others of their own species. Please read the following choices and select those things which exist in your home.<br><br>
+        <div class="card appQuestion" id="q3">
+          <div class="card-body">
+            <h2 class="card-title">Do you have access to a yard?</h2>
+            <p class="card-text">Some pets require daily access to the outdoors, such as a yard. Can you provide or have access to such a space?<br><br>
+
+              <button class="btn btn-dark nextQuestion" data-selection="true">I have a yard</button>
+              <button class="btn btn-dark nextQuestion" data-selection="">I do not have a yard</button><!-- This data-selection is deliberately empty; empty strings evaluate to false in JS -->
+            </p>
+          </div>
+        </div><!-- /.appQuestion#q3 -->
+
+        <div class="card appQuestion" id="q4">
+          <div class="card-body">
+            <h2 class="card-title">Which of the following do you already have?</h2>
+            <p class="card-text">Everyone has likes and dislikes, even pets! Some pets don't have the temperment to deal with children, or even others of their own species. Please read the following choices and select those things which exist in your home.<br><br>
 
               <input type="checkbox" id="children" data-selection="child">
               <label for="children">Children</label>
@@ -102,46 +105,46 @@
               <label for="dogs">Dogs</label>
 
               <button class="btn btn-dark finalQuestion" data-input>Show me my matches!</button>
-              </p>
-            </div>
-          </div><!-- /.appQuestion#q4 -->
+            </p>
+          </div>
+        </div><!-- /.appQuestion#q4 -->
 
-        </div>
-        <div class="row appOutput">
-
-        </div><!-- /.row /.appOutput -->
       </div>
-      
-    </div><!-- /.container -->
+      <div class="row appOutput">
+
+      </div><!-- /.row /.appOutput -->
+    </div>
+
+  </div><!-- /.container -->
 
   <footer>
     <ul class="nav d-flex flex-column flex-md-row align-items-center">
-        <li class="nav-item">
-          <a class="nav-link" href="index.html">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Adopt</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="index.html#about">About</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="index.html#contact">Contact</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="tel:502-555-5555">Call now</a>
-        </li>
-        <li class="nav-item ml-md-auto">
-          <a class="nav-link disabled" href="#"><address class="nav-text">100 Fictional Ave., Louisville, KY 40204</address></a>
-        </li>
-      </ul>
+      <li class="nav-item">
+        <a class="nav-link" href="index.html">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Adopt</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="index.html#about">About</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="index.html#contact">Contact</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="tel:502-555-5555">Call now</a>
+      </li>
+      <li class="nav-item ml-md-auto">
+        <a class="nav-link disabled" href="#">
+          <address class="nav-text">100 Fictional Ave., Louisville, KY 40204</address>
+        </a>
+      </li>
+    </ul>
   </footer>
 
   <script src="js/jquery-3.4.1.min.js"></script>
   <script src="js/bootstrap.bundle.min.js"></script>
   <script src="js/app.js"></script>
 
-</body>
-
-</html>
+</body></html>
 
