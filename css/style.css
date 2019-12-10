@@ -1,11 +1,6 @@
-.appQuestion {
-  display: none;
-} /* To be overriden in app.js */
-
-
-/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-  COLORS
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  Colors
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
 /*
 #e98e51, burnt sienna, main color;
@@ -16,18 +11,12 @@
 
 #9fa4a7, gray chateau, light accent;
 #a17952, limed oak, dark accent;
-
-:root {
-  --primary: #e98e51;
-  --info: #3f5250;
-  --success: #7ba550;
-  --warning: #f89518;
-  --danger: #f44336;
-}
-
 */
 
 
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  General
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 body {
   background-color: #f4f3ed;
   color: #3f5250;
@@ -53,13 +42,63 @@ a {
   color: #f4f3ed;
 }
 
+.btn {
+  padding: 2rem;
+}
+
+.nav-link {
+  padding: 1rem 5rem;
+}
+
+.nav-item {
+  border-bottom: solid 1px #3f5250;
+}
+
+.nav-item:last-child {
+  border-bottom: 0;
+}
+
 .btn-dark {
   background-color: #3f5250;
   color: #f4f3ed;
   border-color: #3f5250;
 }
 
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  index.html
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  adopt.html
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+.appQuestion {
+  /* To be overriden in app.js */
+  display: none;
+} 
+
 .card,
 .list-group-item {
   background-color: #f4f3ed;
+}
+
+
+/* ------------------------------
+  Media Queries
+------------------------------ */
+
+@media (min-width: 768px) {
+  .btn {
+    padding: 6px 12px;
+  }
+  
+  .nav-link {
+    padding: .5rem 1rem;
+  }
+  
+  .nav-item {
+    border-bottom: 0;
+  }
+  
 }
