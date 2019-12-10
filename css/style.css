@@ -23,6 +23,7 @@ body {
 }
 
 a {
+  /* More accessible (higher contrast) color for links. */
   color: #ff4500;
 }
 
@@ -38,30 +39,34 @@ a {
 }
 
 .jumbotron {
-  background-color: #ff4500;
+  background-color: #e98e51;
   color: #f4f3ed;
 }
 
 .btn {
+  /* Ease of use */
   padding: 2rem;
-}
-
-.nav-link {
-  padding: 1rem 5rem;
-}
-
-.nav-item {
-  border-bottom: solid 1px #3f5250;
-}
-
-.nav-item:last-child {
-  border-bottom: 0;
 }
 
 .btn-dark {
   background-color: #3f5250;
   color: #f4f3ed;
   border-color: #3f5250;
+}
+
+.nav-link {
+  /* Ease of use */
+  padding: 1rem 5rem;
+}
+
+.nav-item {
+  /* Ease of use */
+  border-bottom: solid 1px #3f5250;
+}
+
+.nav-item:last-child {
+  /* Ease of use */
+  border-bottom: 0;
 }
 
 
