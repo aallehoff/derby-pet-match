@@ -28,37 +28,38 @@
 */
 
 
-#override {
+body {
   background-color: #f4f3ed;
   color: #3f5250;
 }
 
-#override a {
+a {
   color: #ff4500;
 }
 
-#override .bg-primary {
-  background-color: #3f5250 !important;
+.bg-custom {
+  /* Use this instead of .bg-primary to avoid unwanted behavior. */
+  background-color: #3f5250;
 }
 
-#override .navbar-dark,
-#override .navbar-brand,
-#override .navbar-nav a {
+.navbar-dark,
+.navbar-brand,
+.navbar-nav a {
   color: #f4f3ed;
 }
 
-#override .jumbotron {
+.jumbotron {
   background-color: #ff4500;
   color: #f4f3ed;
 }
 
-#override .btn-dark {
+.btn-dark {
   background-color: #3f5250;
   color: #f4f3ed;
   border-color: #3f5250;
 }
 
-#override .card,
-#override .list-group-item {
+.card,
+.list-group-item {
   background-color: #f4f3ed;
 }
