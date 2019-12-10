@@ -74,6 +74,16 @@ a {
   index.html
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
+.carousel-item {
+  display: flex;
+  align-content: center;
+}
+
+.carousel img {
+  height: 500px;
+  align-content: center;
+}
+
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
   adopt.html
