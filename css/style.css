@@ -69,6 +69,12 @@ a {
   border-bottom: 0;
 }
 
+.nav-logo {
+  height: 2rem;
+  padding-right: 3px;
+  padding-bottom: 3px;
+}
+
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
   index.html
