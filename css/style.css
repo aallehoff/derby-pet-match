@@ -87,6 +87,10 @@ a {
   padding-bottom: 3px;
 }
 
+address {
+  margin: 0;
+}
+
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
   index.html
@@ -150,6 +154,17 @@ input[type="checkbox"] {
   input[type="checkbox"] {
     transform: scale(1);
   }
+  
+  /* Disable nav item underlining for medium screens and up. */
+  .nav-item:after {
+  /* Ease of use */
+  content: "" !important;
+  display: inherit !important;
+  margin: 0 !important;
+  width: 0 !important;
+  border-bottom: 0 !important;
+}
+  
 
 }
 
