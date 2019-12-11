@@ -7,11 +7,13 @@
 
   <title>Derby Pet Match | Adopt</title>
 
+  <!-- Favicons -->
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
   <link rel="manifest" href="/site.webmanifest">
 
+  <!-- Styles -->
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
@@ -21,7 +23,7 @@
     <nav class="navbar navbar-expand-md navbar-dark bg-custom">
       <a class="navbar-brand" href="index.html"><img src="img/logo.svg" class="nav-logo">Derby Pet Match</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNav"><span class="navbar-toggler-icon"></span></button>
-
+      <!-- When collapsed, separator lines will be placed between items. -->
       <div class="collapse navbar-collapse" id="collapsibleNav">
         <ul class="navbar-nav ml-md-auto">
           <li class="nav-item">
@@ -38,21 +40,23 @@
           </li>
         </ul><!-- /.navbar-nav -->
       </div><!-- /#collapsibleNav -->
-
     </nav><!-- /.navbar -->
   </header>
 
   <div class="jumbotron" id="appPreamble">
-    <h1 class="display-5">Pet Adoption</h1>
+    <!-- A full width jumbotron with flavor text and a splash of color. -->
+    <h1>Pet Adoption</h1>
     <hr>
+    <p class="lead">Puppy kisses, gentle purrs, and warm cuddles. It's time.</p>
   </div>
 
   <div class="container-fluid">
-
     <div id="appWrap">
+      <!-- app.js will not interact with anything outside of here. -->
       <div id="appInput">
-
+        <!-- All input controls are contained here.  -->
         <div class="card appInitial" id="q0">
+          <!-- Presents two buttons which call two different functions in app.js resulting in either all pets being displayed, or further questions being asked to generate and output a custom list of pets. -->
           <div class="card-body">
             <h2 class="card-title">Let's begin!</h2>
             <hr>
@@ -66,6 +70,7 @@
         </div><!-- /.appInitial#q0 -->
 
         <div class="card appQuestion" id="q1">
+          <!-- First of four questions. -->
           <div class="card-body">
             <h2 class="card-title">What kind of personality do you have?</h2>
             <hr>
@@ -79,6 +84,7 @@
         </div><!-- /.appQuestion#q1 -->
 
         <div class="card appQuestion" id="q2">
+          <!-- Second of four questions. -->
           <div class="card-body">
             <h2 class="card-title">How big is your living space?</h2>
             <p class="card-text">The amount of space a pet needs to live comfortable can vary dramatically based on multiple factors, such as species, breed, sex, etc. It's okay if you don't own your own home, we just need to know how many rooms you have.</p>
@@ -91,6 +97,7 @@
         </div><!-- /.appQuestion#q2 -->
 
         <div class="card appQuestion" id="q3">
+          <!-- Third of four questions. -->
           <div class="card-body">
             <h2 class="card-title">Do you have access to a yard?</h2>
             <p class="card-text">Some pets require daily access to the outdoors, such as a yard. Can you provide or have access to such a space?</p>
@@ -103,6 +110,7 @@
         </div><!-- /.appQuestion#q3 -->
 
         <div class="card appQuestion" id="q4">
+          <!-- Fourth of four questions. -->
           <div class="card-body">
             <h2 class="card-title">Which of the following do you already have?</h2>
             <p class="card-text">Everyone has likes and dislikes, even pets! Some pets don't have the temperment to deal with children, or even others of their own species. Please read the following choices and select those things which exist in your home.</p>
@@ -128,14 +136,14 @@
 
       </div>
       <div class="row appOutput">
-
+        <!-- All output content and markup is generated in app.js. -->
       </div><!-- /.row /.appOutput -->
     </div>
-
   </div><!-- /.container -->
 
   <footer>
     <ul class="nav d-flex flex-column flex-md-row align-items-center">
+      <!-- On small screens, separator lines will be placed between items. -->
       <li class="nav-item">
         <a class="nav-link" href="index.html">Home</a>
       </li>
@@ -164,4 +172,3 @@
   <script src="js/app.js"></script>
 
 </body></html>
-

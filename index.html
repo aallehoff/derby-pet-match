@@ -6,12 +6,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>Derby Pet Match | Home</title>
-  
+
+  <!-- Favicons -->
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
   <link rel="manifest" href="/site.webmanifest">
 
+  <!-- Styles -->
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
@@ -21,7 +23,7 @@
     <nav class="navbar navbar-expand-md navbar-dark bg-custom">
       <a class="navbar-brand" href="#"><img src="img/logo.svg" class="nav-logo">Derby Pet Match</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNav"><span class="navbar-toggler-icon"></span></button>
-
+      <!-- When collapsed, separator lines will be placed between items. -->
       <div class="collapse navbar-collapse" id="collapsibleNav">
         <ul class="navbar-nav ml-md-auto">
           <li class="nav-item active">
@@ -38,22 +40,23 @@
           </li>
         </ul><!-- /.navbar-nav -->
       </div><!-- /#collapsibleNav -->
-
     </nav><!-- /.navbar -->
   </header>
 
   <div class="jumbotron">
-    <h1 class="display-5">Adopt now!</h1>
+    <!-- A full width jumbotron with a splash of color to entire users to adopt. -->
+    <h1>Adopt now!</h1>
     <p class="lead">Are you ready to take home a new <em>forever friend</em>?</p>
     <hr>
     <p>We have plenty of pets who are ready for a lifetime supply of warm nights, endless food, and plenty of affection right now. All you have to do is answer a few questions.</p>
     <a class="btn btn-dark btn-large" href="adopt.html">Let's get started!</a>
-
   </div><!-- /.jumbotron -->
 
   <div class="container-fluid">
+    <!-- This container's children are set to deliver a fullscreen experience on mobile, splitting to half-width on tablets, and finally quarter-width on desktop. -->
     <div class="row">
       <div class="col-12 col-md-6 col-xl-3 order-1 order-xl-2" id="about-text">
+        <!-- This first column contains info about the fictional adoption agency, and this real-life project. -->
         <h2>About Us</h2>
         <hr>
         <div>
@@ -62,12 +65,13 @@
         </div>
         <div>
           <h3>Our Website</h3>
-          <p>Is secretly a final project for Code Louisville: Front-End Web Development written by Aaron Allehoff. Designed with a mobile-first approach, it uses Bootstrap and jQuery to create an interactive user experience.</p> <p>The logo is sourced from <a href="http://material.io/" target="blank">Material Design</a> in accordance with the <a href="https://www.apache.org/licenses/LICENSE-2.0.html" target="_blank">Apache 2.0 license</a>, and all other images are sourced from <a href="http://pexels.com/" target="_blank">Pexels</a> in accordance with the <a href="https://www.pexels.com/photo-license/" target="_blank">Pexels license</a>.</p>
+          <p>Is secretly a final project for Code Louisville: Front-End Web Development written by Aaron Allehoff. Designed with a mobile-first approach, it uses Bootstrap and jQuery to create an interactive user experience.</p>
+          <p>The logo is sourced from <a href="http://material.io/" target="blank">Material Design</a> in accordance with the <a href="https://www.apache.org/licenses/LICENSE-2.0.html" target="_blank">Apache 2.0 license</a>, and all other images are sourced from <a href="http://pexels.com/" target="_blank">Pexels</a> in accordance with the <a href="https://www.pexels.com/photo-license/" target="_blank">Pexels license</a>.</p>
         </div>
-
       </div><!-- /#about-text -->
 
       <div class="col-12 col-md-6 col-xl-3 order-3 order-md-2 order-xl-4" id="contact-text">
+        <!-- This second column contains contact info for the fictional adoption agency. -->
         <h2>Contact Info</h2>
         <hr>
 
@@ -85,15 +89,10 @@
           <h3>Find us</h3>
           <p>We are <a href="https://goo.gl/maps/T3YohY42QUpS1YrF9">located</a> in the comfortable Highlands neighborhood of Louisville, KY at the corner of Bardstown Rd. and Fictional Ave. Come say hello; we have some pets who are ready to meet you!</p>
         </div>
-
       </div><!-- /#contact-text -->
 
-      <!-- <div class="col-12 col-md-6 col-xl-3 order-2 order-md-3 order-xl-1" id="about-image">
-          <img class="img-fluid" src="img/placeimg_640_480_animals.jpg">
-        </div> -->
-      <!-- /#about-image -->
-
       <div id="attract" class="carousel slide col-12 col-md-6 col-xl-3 order-2 order-md-3 order-xl-1" data-ride="carousel">
+        <!-- This interactive image carousel is included to give users the sense of being in an adoption agency, or having a pet at home. All images are of equal dimensions to avoid unwanted behavior. -->
         <div id="attract-wrapper">
           <ol class="carousel-indicators">
             <li data-target="#attract" data-slide-to="0" class="active"></li>
@@ -123,14 +122,15 @@
       </div> <!-- /#attract -->
 
       <div class="col-12 col-md-6 col-xl-3 order-4 order-xl-3" id="contact-image">
+        <!-- A Google map of the neighborhood in which our fictional adoption agency is located. -->
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12534.865715163434!2d-85.73691625902858!3d38.239687028357594!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x886972d528100b1f%3A0xff5c58ca2618a50a!2sHighlands%2C%20Louisville%2C%20KY%2040204!5e0!3m2!1sen!2sus!4v1574214965033!5m2!1sen!2sus" width="100%" height="500px" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
       </div><!-- /#contact-image -->
-
     </div><!-- /.row -->
   </div><!-- /.container-fluid -->
 
   <footer>
     <ul class="nav d-flex flex-column flex-md-row align-items-center">
+      <!-- On small screens, separator lines will be placed between items. -->
       <li class="nav-item">
         <a class="nav-link" href="#">Home</a>
       </li>
