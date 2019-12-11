@@ -59,17 +59,29 @@ a {
   padding: 1rem 5rem;
 }
 
-.nav-item {
+.nav-item:after {
   /* Ease of use */
+  content: "";
+  display: block;
+  margin: 0 auto;
+  width: 10rem;
   border-bottom: solid 1px #3f5250;
 }
 
-.nav-item:last-child {
+.nav-item:last-child:after {
   /* Ease of use */
-  border-bottom: 0;
+  border-bottom: 0 !important;
+  /* Marked important to work in hamburger menu as well as footer. */
+}
+
+.navbar-dark .nav-item:after {
+  margin: auto 0;
+  width: 4rem;
+  border-bottom: solid 1px #f4f3ed;
 }
 
 .nav-logo {
+  /* Make logo look nice alongside text. */
   height: 2rem;
   padding-right: 3px;
   padding-bottom: 3px;
