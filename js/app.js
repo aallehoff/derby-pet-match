@@ -64,19 +64,24 @@ function printResults(selector, array, keys) {
 
         // Compare response['presence'] and petObj['presence'] arrays.
         let tolerable;
-        $.each(response['presence'], (i, string) => {
-          let score = 0;
-          if (petObj['presence'].includes(string)) {
-            // We use an if loop here because the same functionality cannot be achieved using boolean logic alone.
-            score += 0;
-          } else {
-            score++;
-          }
-          tolerable = !score;
-          /*
-            We exploit the fact that the inverse of a number returns a boolean to determine if there is a match. For each value stored in response['presence'], if that value does not exist in petObj we increment score and move on. A score of 0 indicates a compatible match, and we set tolerable to true. Otherwise, there is no match and tolerable is set to false.
-          */
-        })
+        if (response['presence'].length < 1) {
+          // Handle case where user checks no boxes in q4.
+          tolerable = true;
+        } else {
+          $.each(response['presence'], (i, string) => {
+            let score = 0;
+            if (petObj['presence'].includes(string)) {
+              // We use an if loop here because the same functionality cannot be achieved using boolean logic alone.
+              score += 0;
+            } else {
+              score++;
+            }
+            tolerable = !score;
+            /*
+              We exploit the fact that the inverse of a number returns a boolean to determine if there is a match. For each value stored in response['presence'], if that value does not exist in petObj we increment score and move on. A score of 0 indicates a compatible match, and we set tolerable to true. Otherwise, there is no match and tolerable is set to false.
+            */
+          });
+        }
 
         // Determine whether we need to skip this object in the array.
         let skip = !(
