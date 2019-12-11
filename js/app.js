@@ -14,7 +14,7 @@ function recordAnswer(event, array, index) {
     /*
       If the target <button> of the event has the custom 'data-input' attribute then the data needed is contained in a sibling <input>. This means we need to look for siblings to extract the data from.
     */
-    $(event.target).siblings('input').each((i, elem) => {
+    $(event.target).siblings('div').children('input').each((i, elem) => {
       if ($(elem).attr('type') == "number") {
         // Input Type: NUMBER
         array[index] = $(elem).val();
