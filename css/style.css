@@ -51,7 +51,7 @@ a {
 .btn-dark {
   background-color: #3f5250;
   color: #f4f3ed;
-  border-color: #3f5250;
+  border-color: #f4f3ed;
 }
 
 .nav-link {
@@ -73,6 +73,10 @@ a {
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
   index.html
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+.jumbotron .btn {
+  border-color: #e98e51;
+}
 
 .carousel {
   /* Match margin of surrounding content. */
@@ -97,6 +101,11 @@ a {
   background-color: #f4f3ed;
 }
 
+input[type="checkbox"] {
+  transform: scale(2);
+  margin-right: 3px;
+}
+
 
 /* ------------------------------
   Media Queries
@@ -118,6 +127,10 @@ a {
   .carousel img {
     /* Allow default behavior at intermediate resolutions. */
     width: auto;
+  }
+  
+  input[type="checkbox"] {
+    transform: scale(1);
   }
 
 }

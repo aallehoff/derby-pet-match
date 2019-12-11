@@ -51,11 +51,12 @@
           <div class="card-body">
             <h2 class="card-title">Let's begin!</h2>
             <hr>
-            <p class="card-text">Would you like us to find a pet who best suits you and your home, or simply view all available pets?<br><br>
+            <p class="card-text">Would you like us to find a pet who best suits you and your home, or simply view all available pets?</p>
 
-              <button class="btn btn-dark" id="viewAll" data-selection="viewAll">View all pets</button>
-              <button class="btn btn-dark" id="petMatch" data-selection="petMatch">Find your match</button>
-            </p>
+            <div class="d-flex justify-content-center justify-content-xl-around">
+              <button class="btn btn-dark flex-grow-1 flex-xl-grow-0 flex-xl-grow-0" id="viewAll" data-selection="viewAll">View all pets</button>
+              <button class="btn btn-dark flex-grow-1 flex-xl-grow-0" id="petMatch" data-selection="petMatch">Find a match</button>
+            </div>
           </div>
         </div><!-- /.appInitial#q0 -->
 
@@ -63,49 +64,60 @@
           <div class="card-body">
             <h2 class="card-title">What kind of personality do you have?</h2>
             <hr>
-            <p class="card-text">We know you're a caring person because you're interested in adoption. Some pets are better suited to certain human lifestyles. Do you have an introverted, or an extroverted personality?<br><br>
+            <p class="card-text">We know you're a caring person because you're interested in adoption. Some pets are better suited to certain human lifestyles. Do you have an introverted, or an extroverted personality?</p>
 
-              <button class="btn btn-dark nextQuestion" data-selection="introvert">I'm an introvert</button>
-              <button class="btn btn-dark nextQuestion" data-selection="extrovert">I'm an extrovert</button>
-            </p>
+            <div class="d-flex justify-content-center justify-content-xl-around">
+              <button class="btn btn-dark nextQuestion flex-grow-1 flex-xl-grow-0" data-selection="introvert">I'm an introvert</button>
+              <button class="btn btn-dark nextQuestion flex-grow-1 flex-xl-grow-0" data-selection="extrovert">I'm an extrovert</button>
+            </div>
           </div>
         </div><!-- /.appQuestion#q1 -->
 
         <div class="card appQuestion" id="q2">
           <div class="card-body">
             <h2 class="card-title">How big is your living space?</h2>
-            <p class="card-text">The amount of space a pet needs to live comfortable can vary dramatically based on multiple factors, such as species, breed, sex, etc. It's okay if you don't own your own home, we just need to know how many rooms you have.<br><br>
-              I have <input type="number"> rooms.<br>
-              <button class="btn btn-dark nextQuestion" data-input>Proceed</button>
-            </p>
+            <p class="card-text">The amount of space a pet needs to live comfortable can vary dramatically based on multiple factors, such as species, breed, sex, etc. It's okay if you don't own your own home, we just need to know how many rooms you have.</p>
+
+            <div class="d-flex flex-column flex-md-row justify-content-center justify-content-xl-around">
+              <div class="flex-grow-1 flex-xl-grow-0">I have <input type="number"> rooms.</div>
+              <button class="btn btn-dark nextQuestion flex-grow-1 flex-xl-grow-0" data-input>Proceed</button>
+            </div>
           </div>
         </div><!-- /.appQuestion#q2 -->
 
         <div class="card appQuestion" id="q3">
           <div class="card-body">
             <h2 class="card-title">Do you have access to a yard?</h2>
-            <p class="card-text">Some pets require daily access to the outdoors, such as a yard. Can you provide or have access to such a space?<br><br>
+            <p class="card-text">Some pets require daily access to the outdoors, such as a yard. Can you provide or have access to such a space?</p>
 
-              <button class="btn btn-dark nextQuestion" data-selection="true">I have a yard</button>
-              <button class="btn btn-dark nextQuestion" data-selection="">I do not have a yard</button><!-- This data-selection is deliberately empty; empty strings evaluate to false in JS -->
-            </p>
+            <div class="d-flex justify-content-center justify-content-xl-around">
+              <button class="btn btn-dark nextQuestion flex-grow-1 flex-xl-grow-0" data-selection="true">I have a yard</button>
+              <button class="btn btn-dark nextQuestion flex-grow-1 flex-xl-grow-0" data-selection="">I do not have a yard</button><!-- This data-selection is deliberately empty; empty strings evaluate to false in JS -->
+            </div>
           </div>
         </div><!-- /.appQuestion#q3 -->
 
         <div class="card appQuestion" id="q4">
           <div class="card-body">
             <h2 class="card-title">Which of the following do you already have?</h2>
-            <p class="card-text">Everyone has likes and dislikes, even pets! Some pets don't have the temperment to deal with children, or even others of their own species. Please read the following choices and select those things which exist in your home.<br><br>
+            <p class="card-text">Everyone has likes and dislikes, even pets! Some pets don't have the temperment to deal with children, or even others of their own species. Please read the following choices and select those things which exist in your home.</p>
 
-              <input type="checkbox" id="children" data-selection="child">
-              <label for="children">Children</label>
-              <input type="checkbox" id="cats" data-selection="cat">
-              <label for="cats">Cats</label>
-              <input type="checkbox" id="dogs" data-selection="dog">
-              <label for="dogs">Dogs</label>
+            <div class="d-flex flex-column flex-md-row justify-content-center justify-content-xl-around">
+              <div class="flex-grow-1 flex-xl-grow-0 mb-3 mb-md-0">
+                <input type="checkbox" id="children" data-selection="child">
+                <label for="children">Children</label><br>
+              </div>
+              <div class="flex-grow-1 flex-xl-grow-0 mb-3 mb-md-0">
+                <input type="checkbox" id="cats" data-selection="cat">
+                <label for="cats">Cats</label><br>
+              </div>
+              <div class="flex-grow-1 flex-xl-grow-0 mb-3 mb-md-0">
+                <input type="checkbox" id="dogs" data-selection="dog">
+                <label for="dogs">Dogs</label><br>
+              </div>
 
-              <button class="btn btn-dark finalQuestion" data-input>Show me my matches!</button>
-            </p>
+              <button class="btn btn-dark finalQuestion flex-grow-1" data-input>Show me my matches!</button>
+            </div>
           </div>
         </div><!-- /.appQuestion#q4 -->
 
