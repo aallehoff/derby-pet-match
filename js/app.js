@@ -63,10 +63,10 @@ function printResults(selector, array, keys) {
         */
 
         // Compare response['presence'] and petObj['presence'] arrays.
-        let tolerable;
+        let presenceMatch;
         if (response['presence'].length < 1) {
           // Handle case where user checks no boxes in q4.
-          tolerable = true;
+          presenceMatch = true;
         } else {
           $.each(response['presence'], (i, string) => {
             let score = 0;
@@ -76,9 +76,9 @@ function printResults(selector, array, keys) {
             } else {
               score++;
             }
-            tolerable = !score;
+            presenceMatch = !score;
             /*
-              We exploit the fact that the inverse of a number returns a boolean to determine if there is a match. For each value stored in response['presence'], if that value does not exist in petObj we increment score and move on. A score of 0 indicates a compatible match, and we set tolerable to true. Otherwise, there is no match and tolerable is set to false.
+              We exploit the fact that the inverse of a number returns a boolean to determine if there is a match. For each value stored in response['presence'], if that value does not exist in petObj we increment score and move on. A score of 0 indicates a compatible match, and we set presenceMatch to true. Otherwise, there is no match and presenceMatch is set to false.
             */
           });
         }
@@ -87,10 +87,10 @@ function printResults(selector, array, keys) {
         let skip = !(
           (response['personality'] == petObj['personality'])
           && (Number(response['rooms']) >= petObj['rooms'])
-          && !((Boolean(response['yard']) && false) && (petObj['yard'] && true))
-          && tolerable
+          && !((Boolean(response['yard']) == false) && (petObj['yard'] == true))
+          && presenceMatch
           /*
-            Most of the process of determining if we need to skip can be accomplished using boolean logic. For the one part that cannot, we use a seperate function to store a boolean in the tolerable variable so that it may be compared against.
+            Most of the process of determining if we need to skip can be accomplished using boolean logic. For the one part that cannot, we use a seperate function to store a boolean in the presenceMatch variable so that it may be compared against.
           */
         )
 
