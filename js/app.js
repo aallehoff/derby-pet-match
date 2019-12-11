@@ -170,7 +170,7 @@ $('.appInitial').on('click', '#petMatch', () => {
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 $('#roomsNumber').on('input', (event) => {
   /* Disable the proceed button if an invalid number is entered. */
-  if (parseInt($(event.target).val()) < 1) {
+  if ($(event.target).val() < 1) {
     $('#roomsButton').prop('disabled', true);
   } else {
     $('#roomsButton').prop('disabled', false);
