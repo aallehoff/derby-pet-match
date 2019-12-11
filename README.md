@@ -8,6 +8,7 @@
     * (optional) Bootstrap or similar
 * __Custom CSS__
     * Minimum 3 rules
+    * Minimum 1 media query
 * __Custom JS__
     * Minimum 1 function
     * (optional) jQuery or similar
