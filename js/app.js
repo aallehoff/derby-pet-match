@@ -61,7 +61,7 @@ function printResults(selector, array, keys) {
         /*
           The important difference between viewAll and petMatch is what pets we *exclude* from the resultant matches. Therefore when deciding which pets to output to the page in petMatch we only need to identify which pets need to be skipped.
         */
-        
+
         // Compare response['presence'] and petObj['presence'] arrays.
         let tolerable;
         $.each(response['presence'], (i, string) => {
@@ -88,7 +88,7 @@ function printResults(selector, array, keys) {
             Most of the process of determining if we need to skip can be accomplished using boolean logic. For the one part that cannot, we use a seperate function to store a boolean in the tolerable variable so that it may be compared against.
           */
         )
-        
+
         if (skip) {
           // Skip to next in each loop if and only if no match.
           return true;
@@ -164,3 +164,15 @@ $('.appInitial').on('click', '#petMatch', () => {
     printResults('.appOutput', answers, labels);
   }); // END .appQuestion .finalQuestion onClick
 }); // END .appInitial #petMatch onClick
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  BEGIN #rooms onInput
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+$('#roomsNumber').on('input', (event) => {
+  /* Disable the proceed button if an invalid number is entered. */
+  if (parseInt($(event.target).val()) < 1) {
+    $('#roomsButton').prop('disabled', true);
+  } else {
+    $('#roomsButton').prop('disabled', false);
+  }
+});
