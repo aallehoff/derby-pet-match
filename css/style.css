@@ -110,6 +110,7 @@ address {
   width: 100%;
 }
 
+
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
   adopt.html
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
@@ -128,6 +129,34 @@ input[type="checkbox"] {
   margin-right: 3px;
 }
 
+label {
+  /* Prevents labels from getting too close to inputs on very small screens. */
+  margin-left: 3px;
+}
+
+.appOutput .card-img-top {
+  /* Normalize the size and presentation of pet images. */
+  display: block;
+  margin: 0 auto;
+  width: auto; /* Tall images will stretch horizontally without this. */
+  max-width: 100%;
+  max-height: 300px;
+}
+
+.badge-dark {
+  background-color: #3f5250;
+  color: #f4f3ed;
+  margin-right: 3px;
+}
+
+#roomsPhrase {
+  margin-bottom: 1rem;
+}
+
+#roomsNumber {
+  /* Override unnecessarily large browser default. */
+  width: 3rem;
+}
 
 /* ------------------------------
   Media Queries

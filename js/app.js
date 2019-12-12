@@ -111,11 +111,11 @@ function printResults(selector, array, keys) {
                         ${petObj['content']['bio']}
                       </div>
                       <ul class="list-group list-group-flush">
-                        <li class="list-group-item">Species: ${petObj['content']['species']}</li>
-                        <li class="list-group-item">Age: ${petObj['content']['age']}</li>
-                        <li class="list-group-item">Sex: ${petObj['content']['sex']}</li>
-                        <li class="list-group-item">Hair: ${petObj['content']['hair']}</li>
-                        <li class="list-group-item">Coat: ${petObj['content']['coat']}</li>
+                        <li class="list-group-item"><span class="badge badge-dark">Species</span> ${petObj['content']['species']}</li>
+                        <li class="list-group-item"><span class="badge badge-dark">Age</span> ${petObj['content']['age']}</li>
+                        <li class="list-group-item"><span class="badge badge-dark">Sex</span> ${petObj['content']['sex']}</li>
+                        <li class="list-group-item"><span class="badge badge-dark">Hair Length</span> ${petObj['content']['hair']}</li>
+                        <li class="list-group-item"><span class="badge badge-dark">Coat Pattern</span> ${petObj['content']['coat']}</li>
                       </ul>
                     </div>`;
 
