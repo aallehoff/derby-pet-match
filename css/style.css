@@ -138,7 +138,8 @@ label {
   /* Normalize the size and presentation of pet images. */
   display: block;
   margin: 0 auto;
-  width: auto; /* Tall images will stretch horizontally without this. */
+  width: auto;
+  /* Tall images will stretch horizontally without this. */
   max-width: 100%;
   max-height: 300px;
 }
@@ -179,22 +180,20 @@ label {
     /* Allow default behavior at intermediate resolutions. */
     width: auto;
   }
-  
+
   input[type="checkbox"] {
     transform: scale(1);
   }
-  
+
   /* Disable nav item underlining for medium screens and up. */
   .nav-item:after {
-  /* Ease of use */
-  content: "" !important;
-  display: inherit !important;
-  margin: 0 !important;
-  width: 0 !important;
-  border-bottom: 0 !important;
-}
-  
-
+    /* Ease of use */
+    content: "" !important;
+    display: inherit !important;
+    margin: 0 !important;
+    width: 0 !important;
+    border-bottom: 0 !important;
+  }
 }
 
 @media (min-width: 2048px) {
